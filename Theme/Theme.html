@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Practice - Theme</title>
+    <link rel="stylesheet" href="../Index.css">
+    <link rel="stylesheet" href="Theme.css">
+    <!-- React CDN -->
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.js"></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.js"></script>
+    <!-- Babel for JSX transformation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-container">
+                <h1 class="logo">
+                    <a href="../Index.html">React Practice</a>
+                </h1>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../Index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../Accessibility/Accessibility.html" class="nav-link">Accessibility</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Theme.html" class="nav-link" aria-current="page">Theme</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="theme-app"></div>
+    </main>
+
+    <script type="text/babel" src="Theme.js"></script>
+</body>
+</html>

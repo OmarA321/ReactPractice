@@ -1,0 +1,334 @@
+/* CSS Custom Properties for Theme System */
+:root {
+    /* Light theme colors (default) */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-tertiary: #f1f5f9;
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    --text-muted: #6b7280;
+    --accent-primary: #2563eb;
+    --accent-hover: #1d4ed8;
+    --border-color: #d1d5db;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-strong: rgba(0, 0, 0, 0.15);
+    --success-bg: #d1fae5;
+    --success-border: #10b981;
+    --success-text: #065f46;
+    --error-bg: #fee2e2;
+    --error-border: #ef4444;
+    --error-text: #991b1b;
+    --info-bg: #dbeafe;
+    --info-border: #3b82f6;
+    --info-text: #1e40af;
+}
+
+/* Dark theme colors */
+[data-theme="dark"] {
+    --bg-primary: #1f2937;
+    --bg-secondary: #111827;
+    --bg-tertiary: #374151;
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --text-muted: #9ca3af;
+    --accent-primary: #3b82f6;
+    --accent-hover: #2563eb;
+    --border-color: #4b5563;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --shadow-strong: rgba(0, 0, 0, 0.4);
+    --success-bg: #064e3b;
+    --success-border: #059669;
+    --success-text: #a7f3d0;
+    --error-bg: #7f1d1d;
+    --error-border: #dc2626;
+    --error-text: #fca5a5;
+    --info-bg: #1e3a8a;
+    --info-border: #2563eb;
+    --info-text: #93c5fd;
+}
+
+/* Apply theme colors to body and global elements */
+body {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Update navigation styles for theming */
+.main-nav {
+    background-color: var(--bg-primary);
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.logo a {
+    color: var(--accent-primary);
+}
+
+.nav-link {
+    color: var(--text-secondary);
+}
+
+.nav-link:hover {
+    color: var(--accent-primary);
+    background-color: var(--bg-tertiary);
+}
+
+/* Update main content styling */
+main {
+    background-color: var(--bg-secondary);
+}
+
+.hero {
+    background-color: var(--bg-primary);
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.hero h2 {
+    color: var(--text-primary);
+}
+
+.hero p {
+    color: var(--text-muted);
+}
+
+/* Theme switcher specific styles */
+.theme-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.theme-section {
+    background: var(--bg-primary);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.theme-section h2 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.theme-section h3 {
+    color: var(--text-secondary);
+    margin: 1.5rem 0 1rem 0;
+    font-size: 1.3rem;
+}
+
+.theme-section p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.toggle-button {
+    position: relative;
+    width: 60px;
+    height: 32px;
+    background-color: var(--border-color);
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 0;
+}
+
+.toggle-button:hover {
+    background-color: var(--text-muted);
+}
+
+.toggle-button:focus {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}
+
+.toggle-button.active {
+    background-color: var(--accent-primary);
+}
+
+.toggle-slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 28px;
+    height: 28px;
+    background-color: var(--bg-primary);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.toggle-button.active .toggle-slider {
+    transform: translateX(28px);
+}
+
+.toggle-label {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+/* Demo cards for showcasing theme */
+.demo-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.demo-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: all 0.3s ease;
+}
+
+.demo-card:hover {
+    box-shadow: 0 4px 8px var(--shadow-strong);
+    transform: translateY(-2px);
+}
+
+.demo-card h4 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.demo-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Button variants for theme demo */
+.btn {
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn:hover {
+    background: var(--accent-hover);
+}
+
+.btn:focus {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}
+
+.btn-secondary {
+    background: var(--text-muted);
+    color: var(--bg-primary);
+}
+
+.btn-secondary:hover {
+    background: var(--text-secondary);
+}
+
+/* Form elements themed */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Status containers themed */
+.status-container {
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+.status-success {
+    background: var(--success-bg);
+    border: 1px solid var(--success-border);
+    color: var(--success-text);
+}
+
+.status-error {
+    background: var(--error-bg);
+    border: 1px solid var(--error-border);
+    color: var(--error-text);
+}
+
+.status-info {
+    background: var(--info-bg);
+    border: 1px solid var(--info-border);
+    color: var(--info-text);
+}
+
+/* Theme persistence indicator */
+.theme-indicator {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px var(--shadow-strong);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Smooth transitions for theme changes */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
