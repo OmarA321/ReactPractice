@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React Practice - Theme</title>
+    <!-- Global styles first (includes theme system and shared styles) -->
     <link rel="stylesheet" href="../Index.css">
+    <!-- Page-specific styles -->
     <link rel="stylesheet" href="Theme.css">
     <!-- React CDN -->
     <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.js"></script>
@@ -13,6 +15,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
 </head>
 <body>
+    <!-- Skip link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <header>
         <nav class="main-nav">
             <div class="nav-container">
@@ -34,10 +39,11 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <div id="theme-app"></div>
     </main>
 
     <script type="text/babel" src="Theme.js"></script>
+    <script src="../theme-init.js"></script>
 </body>
 </html>

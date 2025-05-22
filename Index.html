@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="Index.css">
 </head>
 <body>
+    <!-- Skip link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <header>
         <nav class="main-nav">
             <div class="nav-container">
@@ -15,7 +18,7 @@
                 </h1>
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="Index.html" class="nav-link">Home</a>
+                        <a href="Index.html" class="nav-link" aria-current="page">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="Accessibility/Accessibility.html" class="nav-link">Accessibility</a>
@@ -28,7 +31,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="hero">
             <h2>Welcome to Omar's React Demo</h2>
             <p>This website demonstrates React concepts, accessibility features, and theme switching.</p>

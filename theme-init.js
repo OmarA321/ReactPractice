@@ -1,5 +1,4 @@
 //this file makes sure that theme stays pristence with other pages
-
 (function() {
     'use strict';
     
@@ -41,6 +40,7 @@
         }
     });
     
+    // Global theme utility for non-React pages
     window.ReactPracticeTheme = {
         getCurrentTheme: getCurrentTheme,
         setTheme: applyTheme,
@@ -56,7 +56,7 @@
         }
     };
     
-    // Initialize theme on DOM ready
+    // Initialize theme on DOM ready if needed
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
             applyTheme(getCurrentTheme());
